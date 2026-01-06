@@ -1,91 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Intro</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<meta charset="UTF-8">
+<title>OG Geet | Cyber × Medical</title>
 
-        body {
-            height: 100vh;
-            background: linear-gradient(135deg, #020024, #090979, #00d4ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            color: white;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        .intro-box {
-            text-align: center;
-            padding: 40px 60px;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.4);
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
-            animation: float 4s ease-in-out infinite;
-        }
+body{
+    height:100vh;
+    background: radial-gradient(circle at top, #020024, #020024, #000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
 
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0); }
-        }
+/* cyber particles */
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background: repeating-radial-gradient(circle, rgba(0,255,255,0.07) 0 2px, transparent 2px 40px);
+    animation: moveBg 30s linear infinite;
+}
 
-        .intro-box img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid cyan;
-            box-shadow: 0 0 20px cyan;
-            margin-bottom: 20px;
-        }
+@keyframes moveBg{
+    to{transform:translate(-200px,-200px);}
+}
 
-        h1 {
-            font-size: 42px;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px cyan;
-        }
+.intro-box{
+    position:relative;
+    max-width:700px;
+    text-align:center;
+    padding:40px 60px;
+    border-radius:25px;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter: blur(12px);
+    box-shadow:0 0 55px rgba(0,255,255,0.7);
+    animation: float 4s ease-in-out infinite;
+    z-index:2;
+}
 
-        h2 {
-            font-size: 20px;
-            margin-top: 10px;
-            color: #00ffff;
-        }
+@keyframes float{
+    50%{transform:translateY(-18px);}
+}
 
-        p {
-            margin-top: 15px;
-            font-size: 15px;
-            opacity: 0.9;
-        }
+.intro-box img{
+    width:145px;
+    height:145px;
+    border-radius:50%;
+    border:4px solid cyan;
+    box-shadow:0 0 30px cyan;
+    margin-bottom:20px;
+}
 
-        .glow-line {
-            width: 120px;
-            height: 3px;
-            background: cyan;
-            margin: 20px auto;
-            box-shadow: 0 0 15px cyan;
-        }
-    </style>
+h1{
+    font-size:38px;
+    letter-spacing:2px;
+    text-shadow:0 0 18px cyan;
+}
+
+.glow-line{
+    width:140px;
+    height:3px;
+    background:cyan;
+    margin:18px auto;
+    box-shadow:0 0 20px cyan;
+}
+
+h2{
+    font-size:20px;
+    color:#00ffff;
+    margin-bottom:18px;
+}
+
+.bio{
+    font-size:14.5px;
+    line-height:1.7;
+    opacity:0.92;
+    text-align:left;
+}
+
+.bio span{
+    color:#00ffff;
+    font-weight:600;
+}
+
+.quote{
+    margin-top:15px;
+    font-style:italic;
+    color:#cfffff;
+}
+
+.footer{
+    margin-top:18px;
+    font-size:13px;
+    color:#9ff;
+    text-align:center;
+}
+
+/* responsive */
+@media(max-width:650px){
+    .intro-box{
+        padding:30px;
+    }
+    h1{font-size:30px;}
+}
+</style>
 </head>
+
 <body>
 
-    <div class="intro-box">
-        <!-- Replace image.jpg with your image -->
-        <img src="geet chaurisa.jpg" alt="My Photo">
+<div class="intro-box">
 
-        <h1>Geet Charusia</h1>
-        <div class="glow-line"></div>
-        <h2>Cyber Intelligence Programmer</h2>
-        <p>
-            Passionate about technology, security,<br>
-            and building futuristic digital solutions.
-        </p>
+    <img src="geet chaurisa.jpg" alt="OG Geet">
+
+    <h1>ᴼᴳＧ乇乇ㄒ᭄࿐</h1>
+    <div class="glow-line"></div>
+
+    <h2>Cyber Intelligence Programmer</h2>
+
+    <div class="bio">
+        <p><span>Jai Shree Ram 🚩</span></p>
+        <p><span>STUDENT OF →</span> Medical Science | NEET Aspirant</p>
+        <p><span>CAREER →</span> Future Doctor</p>
+
+        <div class="quote">
+            "I don't chase attention — I chase excellence. Built with discipline,
+            powered by consistency, and driven by an unbreakable mindset.
+            I believe in silent grind, sharp focus, and steady progress.
+            Every day is a step closer to the white coat and a life of purpose."
+        </div>
+
+        <p><span>MINDSET →</span> Calm · Focused · Dangerous</p>
+        <p><span>PASSION →</span> Work in silence. Let success make the noise</p>
+        <p><span>DESTINATION →</span> Top Rank · Doctor · Legacy</p>
+
+        <div class="footer">
+            Born to express, not impressed.<br>
+            Let's enjoy our prime version.
+        </div>
     </div>
+
+</div>
 
 </body>
 </html>
