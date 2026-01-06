@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Intro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: white;
+        }
+
+        .intro-box {
+            text-align: center;
+            padding: 40px 60px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        .intro-box img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid cyan;
+            box-shadow: 0 0 20px cyan;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px cyan;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #00ffff;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .glow-line {
+            width: 120px;
+            height: 3px;
+            background: cyan;
+            margin: 20px auto;
+            box-shadow: 0 0 15px cyan;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-box">
+        <!-- Replace image.jpg with your image -->
+        <img src="image.jpg" alt="My Photo">
+
+        <h1>Geet Charusia</h1>
+        <div class="glow-line"></div>
+        <h2>Cyber Intelligence Programmer</h2>
+        <p>
+            Passionate about technology, security,<br>
+            and building futuristic digital solutions.
+        </p>
+    </div>
+
+</body>
+</html>
